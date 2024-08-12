@@ -1,0 +1,13 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import BlogCard from "../../components/BlogCard.astro";
+
+const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout pageTitle="Blog List">
+    <div class="min-h-1 columns-1 lg:columns-2 lg:gap-8 gap-6 mx-auto">
+        {posts.map((post) => <BlogCard post={post} />)}
+    </div>
+</BaseLayout>

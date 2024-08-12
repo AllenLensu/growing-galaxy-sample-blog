@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+    <div class="flex flex-col items-center md:items-start mt-[10vw] ml-0 md:ml-[10vw] min-h-[50vh]">
+        <h1 id="nav-headtitle" class="transition-shadow duration-500 drop-shadow-md hover:drop-shadow-xl"></h1>
+        <button id="nav-button"></button>
+    </div>
+</BaseLayout>
+
+<script type="text/javascript">
+    const hello = ["你好！", "Hello, Hi!", "Bonjour!", "こんにちは！", "Hallo!"];
+    const run = ["冲", "Go ahead", "Poursuivre", "どうぞ", "Fortfahren"];
+    let random = Math.floor(Math.random() * hello.length);
+    document.getElementById("nav-headtitle").innerHTML = hello[random];
+    document.getElementById("nav-button").innerHTML = run[random];
+    document.getElementById("nav-button").addEventListener("click", () => {
+        random = Math.floor(Math.random() * hello.length);
+        document.getElementById("nav-headtitle").innerHTML = hello[random];
+        document.getElementById("nav-button").innerHTML = run[random];
+    });
+</script>

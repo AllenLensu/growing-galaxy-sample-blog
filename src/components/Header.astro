@@ -1,0 +1,87 @@
+---
+import Menu from "./Menu.astro";
+
+const NavMenuList = [
+    { name: "Home", link: "/" },
+    { name: "Blog", link: "/blog" },
+    { name: "About", link: "/about" },
+];
+---
+
+<header class="w-full bg-transparent">
+    <div class="flex flex-row max-md:flex-col justify-between gap-2 items-center px-4 py-2.5">
+        <!--LOGO-->
+        <a class="flex flex-row items-center font-logo gap-0" href="/">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 1150 405">
+                <defs>
+                    <style>
+                        .cls-1 {
+                            isolation: isolate;
+                        }
+
+                        .cls-2 {
+                            fill: #ff4800;
+                        }
+
+                        .cls-3 {
+                            fill: #fff;
+                        }
+
+                        .cls-4 {
+                            font-size: 300px;
+                            fill: #0d0d0d;
+                            font-weight: normal;
+                            font-family: "LOGO-Default", "LOGO-ENG", "LOGO-CHN", sans-serif;
+                        }
+                    </style>
+                </defs>
+                <g id="矩形_1" data-name="矩形 1" class="cls-1">
+                    <g id="矩形_1-2" data-name="矩形 1">
+                        <rect class="cls-2" width="405" height="405" rx="20.25"></rect>
+                    </g>
+                </g>
+                <g id="椭圆_1" data-name="椭圆 1" class="cls-1">
+                    <g id="椭圆_1-2" data-name="椭圆 1">
+                        <circle
+                            class="cls-3"
+                            cx="133.68"
+                            cy="321.18"
+                            r="34.5"
+                            transform="translate(-209.81 266.04) rotate(-58.28)"></circle>
+                    </g>
+                </g>
+                <g id="矩形_2" data-name="矩形 2" class="cls-1">
+                    <g id="矩形_2-2" data-name="矩形 2">
+                        <path class="cls-3" d="M297,288H222a33,33,0,0,0,0,66h75a33,33,0,0,0,0-66Z"></path>
+                    </g>
+                </g>
+                <g id="矩形_2-3" data-name="矩形 2" class="cls-1">
+                    <g id="矩形_2-4" data-name="矩形 2">
+                        <path
+                            class="cls-3"
+                            d="M133.5,45a33,33,0,0,0-33,33V228a33,33,0,0,0,66,0V78A33,33,0,0,0,133.5,45Z"></path>
+                    </g>
+                </g>
+                <text class="cls-4" transform="translate(410 353.94)">ensu</text>
+            </svg>
+        </a>
+
+        <!--MENU-->
+        <Menu items={NavMenuList} />
+    </div>
+</header>
+
+<style>
+    @font-face {
+        font-family: "LOGO-Default";
+        src: url("/assets/Fonts/Logo-Regular.ttf");
+    }
+    @font-face {
+        font-family: "LOGO-ENG";
+        src: url("/assets/Fonts/Logo-ENG.ttf");
+    }
+    @font-face {
+        font-family: "LOGO-CHN";
+        src: url("/assets/Fonts/Logo-CHN.ttf");
+    }
+</style>
